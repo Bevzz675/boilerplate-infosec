@@ -1,4 +1,4 @@
-const express = require('express');
+const express = require('helmet');
 const app = express();
 
 
@@ -46,7 +46,7 @@ const app = express();
 
 
 
-
+app.use(helmet())
 module.exports = app;
 const api = require('./server.js');
 app.use(express.static('public'));
